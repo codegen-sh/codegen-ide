@@ -2,6 +2,7 @@ import * as vscode from 'vscode';
 import { AgentRunsProvider } from './providers/AgentRunsProvider';
 import { AuthManager } from './auth/AuthManager';
 import { ApiClient } from './api/ApiClient';
+import { PrUtils } from './utils/PrUtils';
 
 export function activate(context: vscode.ExtensionContext) {
     console.log('Codegen IDE extension is now active!');
@@ -62,7 +63,11 @@ export function activate(context: vscode.ExtensionContext) {
 
             if (prompt) {
                 try {
-                    const agentRun = await apiClient.createAgentRun(prompt);
+                    // Get current repository for context
+                    const currentRepo = agentRunsProvider.getCurrentRepository();
+                    const repoId = currentRepo ? undefined : undefined; // TODO: Map repository name to ID
+                    
+                    const agentRun = await apiClient.createAgentRun(prompt, undefined, repoId);
                     vscode.window.showInformationMessage(
                         `Agent run created successfully! ID: ${agentRun.id}`,
                         'View in Browser'
@@ -85,6 +90,29 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.commands.registerCommand('codegen.openAgentRun', (agentRun) => {
             if (agentRun.web_url) {
                 vscode.env.openExternal(vscode.Uri.parse(agentRun.web_url));
+            }
+        }),
+
+        vscode.commands.registerCommand('codegen.openAgentRunOrPr', async (agentRun) => {
+            // First, try to open the PR if it exists
+            const prInfo = PrUtils.extractPrInfo(agentRun);
+            
+            if (prInfo) {
+                // Get current repository for local path context
+                const currentRepo = agentRunsProvider.getCurrentRepository();
+                
+                if (currentRepo && currentRepo.fullName === prInfo.repository) {
+                    // We're in the same repository, try to open PR diff view
+                    await PrUtils.openPrDiffView(prInfo, currentRepo.localPath);
+                } else {
+                    // Different repository or no local repo, open PR in browser
+                    await PrUtils.openPrDiff(prInfo);
+                }
+            } else {
+                // No PR, fall back to opening the agent run in browser
+                if (agentRun.web_url) {
+                    vscode.env.openExternal(vscode.Uri.parse(agentRun.web_url));
+                }
             }
         })
     ];
