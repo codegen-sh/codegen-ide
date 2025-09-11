@@ -1,6 +1,8 @@
 import * as vscode from 'vscode';
 import { ApiClient, AgentRun } from '../api/ApiClient';
 import { AuthManager } from '../auth/AuthManager';
+import { GitUtils, GitRepository } from '../utils/GitUtils';
+import { PrUtils, PullRequest } from '../utils/PrUtils';
 
 export class AgentRunItem extends vscode.TreeItem {
     constructor(
@@ -14,10 +16,10 @@ export class AgentRunItem extends vscode.TreeItem {
         this.iconPath = this.getIcon();
         this.contextValue = 'agentRun';
         
-        // Make it clickable to open in browser
+        // Make it clickable to open PR diff or agent run
         this.command = {
-            command: 'codegen.openAgentRun',
-            title: 'Open Agent Run',
+            command: 'codegen.openAgentRunOrPr',
+            title: 'Open Agent Run or PR',
             arguments: [agentRun]
         };
     }
@@ -49,10 +51,10 @@ export class AgentRunItem extends vscode.TreeItem {
             timeAgo = `${diffMinutes}m ago`;
         }
         
-        const prCount = this.agentRun.github_pull_requests?.length || 0;
-        const prText = prCount > 0 ? ` • ${prCount} PR${prCount > 1 ? 's' : ''}` : '';
+        const prText = PrUtils.getPrStatusDescription(this.agentRun);
+        const repoText = this.agentRun.repository ? ` • ${this.agentRun.repository.name}` : '';
         
-        return `${status} • ${timeAgo}${prText}`;
+        return `${status} • ${timeAgo} • ${prText}${repoText}`;
     }
 
     private getIcon(): vscode.ThemeIcon {
@@ -82,14 +84,34 @@ export class AgentRunsProvider implements vscode.TreeDataProvider<AgentRunItem> 
     readonly onDidChangeTreeData: vscode.Event<AgentRunItem | undefined | null | void> = this._onDidChangeTreeData.event;
 
     private agentRuns: AgentRun[] = [];
+    private currentRepository: GitRepository | null = null;
 
     constructor(
         private apiClient: ApiClient,
         private authManager: AuthManager
-    ) {}
+    ) {
+        // Listen for workspace changes to update repository context
+        vscode.workspace.onDidChangeWorkspaceFolders(() => {
+            this.updateRepositoryContext();
+        });
+        
+        // Initialize repository context
+        this.updateRepositoryContext();
+    }
 
     refresh(): void {
+        this.updateRepositoryContext();
         this._onDidChangeTreeData.fire();
+    }
+
+    private async updateRepositoryContext(): Promise<void> {
+        try {
+            this.currentRepository = await GitUtils.getCurrentRepository();
+            console.log('Current repository:', this.currentRepository?.fullName || 'None');
+        } catch (error) {
+            console.error('Failed to get current repository:', error);
+            this.currentRepository = null;
+        }
     }
 
     getTreeItem(element: AgentRunItem): vscode.TreeItem {
@@ -104,8 +126,23 @@ export class AgentRunsProvider implements vscode.TreeDataProvider<AgentRunItem> 
         if (!element) {
             // Root level - return agent runs
             try {
-                const response = await this.apiClient.getAgentRuns(1, 20); // Get first 20 runs
+                // Filter by current repository if available
+                const repositoryName = this.currentRepository?.fullName;
+                const response = await this.apiClient.getAgentRuns(1, 20, repositoryName);
                 this.agentRuns = response.items;
+                
+                // If we have a repository context but no results, show a helpful message
+                if (this.agentRuns.length === 0 && repositoryName) {
+                    // Return a placeholder item to show the user what's happening
+                    const placeholderItem = new vscode.TreeItem(
+                        `No agents found for ${repositoryName}`,
+                        vscode.TreeItemCollapsibleState.None
+                    );
+                    placeholderItem.description = 'Try creating a new agent or check a different repository';
+                    placeholderItem.iconPath = new vscode.ThemeIcon('info');
+                    placeholderItem.contextValue = 'placeholder';
+                    return [placeholderItem];
+                }
                 
                 return this.agentRuns.map(agentRun => 
                     new AgentRunItem(agentRun, vscode.TreeItemCollapsibleState.None)
@@ -118,5 +155,9 @@ export class AgentRunsProvider implements vscode.TreeDataProvider<AgentRunItem> 
         }
 
         return [];
+    }
+
+    getCurrentRepository(): GitRepository | null {
+        return this.currentRepository;
     }
 }

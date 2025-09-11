@@ -10,6 +10,12 @@ export interface AgentRun {
     web_url?: string;
     github_pull_requests?: any[];
     source_type?: string;
+    repository?: {
+        id: number;
+        name: string;
+        full_name: string;
+        owner: string;
+    };
 }
 
 export interface AgentRunsResponse {
@@ -62,19 +68,26 @@ export class ApiClient {
         );
     }
 
-    async getAgentRuns(page: number = 1, perPage: number = 10): Promise<AgentRunsResponse> {
+    async getAgentRuns(page: number = 1, perPage: number = 10, repositoryName?: string): Promise<AgentRunsResponse> {
         const orgId = this.authManager.getOrgId();
         if (!orgId) {
             throw new Error('No organization ID found. Please login again.');
         }
 
         try {
+            const params: any = {
+                page,
+                per_page: perPage,
+                source_type: 'API' // Filter to API source type like the CLI does
+            };
+
+            // Add repository filter if provided
+            if (repositoryName) {
+                params.repository = repositoryName;
+            }
+
             const response = await this.client.get(`/v1/organizations/${orgId}/agent/runs`, {
-                params: {
-                    page,
-                    per_page: perPage,
-                    source_type: 'API' // Filter to API source type like the CLI does
-                }
+                params
             });
 
             return response.data;
