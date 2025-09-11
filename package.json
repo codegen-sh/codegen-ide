@@ -1,0 +1,155 @@
+{
+  "name": "codegen-ide",
+  "displayName": "Codegen IDE",
+  "description": "VSCode Extension for Codegen - Create and manage async code agents",
+  "version": "0.1.0",
+  "publisher": "codegen-sh",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "codegen",
+    "ai",
+    "agent",
+    "code generation",
+    "automation"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codegen.showAgentRuns",
+        "title": "Show Agent Runs",
+        "category": "Codegen"
+      },
+      {
+        "command": "codegen.createAgent",
+        "title": "Create New Agent",
+        "category": "Codegen"
+      },
+      {
+        "command": "codegen.refreshAgentRuns",
+        "title": "Refresh Agent Runs",
+        "category": "Codegen"
+      },
+      {
+        "command": "codegen.login",
+        "title": "Login",
+        "category": "Codegen"
+      },
+      {
+        "command": "codegen.logout",
+        "title": "Logout",
+        "category": "Codegen"
+      },
+      {
+        "command": "codegen.openAgentRun",
+        "title": "Open Agent Run",
+        "category": "Codegen"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "codegenAgentRuns",
+          "name": "Codegen Agent Runs",
+          "when": "codegen.authenticated"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "codegen",
+          "title": "Codegen",
+          "icon": "$(robot)"
+        }
+      ]
+    },
+    "views": {
+      "codegen": [
+        {
+          "id": "codegenAgentRuns",
+          "name": "Recent Agent Runs",
+          "when": "codegen.authenticated"
+        },
+        {
+          "id": "codegenWelcome",
+          "name": "Welcome",
+          "when": "!codegen.authenticated"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "codegenWelcome",
+        "contents": "Welcome to Codegen! 🤖\n\nTo get started, you need to authenticate with your Codegen account.\n\n[Login to Codegen](command:codegen.login)\n\nOnce logged in, you'll be able to:\n• View your recent agent runs\n• Create new agents\n• Manage your code automation\n\nVisit [codegen.com](https://codegen.com) to learn more."
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "codegen.refreshAgentRuns",
+          "when": "view == codegenAgentRuns",
+          "group": "navigation"
+        },
+        {
+          "command": "codegen.createAgent",
+          "when": "view == codegenAgentRuns",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "codegen.openAgentRun",
+          "when": "view == codegenAgentRuns && viewItem == agentRun"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Codegen",
+      "properties": {
+        "codegen.apiEndpoint": {
+          "type": "string",
+          "default": "https://api.codegen.com",
+          "description": "Codegen API endpoint"
+        },
+        "codegen.autoRefresh": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically refresh agent runs"
+        },
+        "codegen.refreshInterval": {
+          "type": "number",
+          "default": 30,
+          "description": "Auto-refresh interval in seconds"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.28.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  }
+}
