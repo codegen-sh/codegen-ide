@@ -106,6 +106,7 @@ Most people will use this extension in development mode. Here's how to set it up
    ```
 
 4. **Launch Extension Development Host**
+   - **Important**: Make sure you have `src/extension.ts` open in the editor
    - Press `F5` or go to Run → Start Debugging
    - This opens a new VSCode window with the extension loaded
    - You can also use `Ctrl+Shift+P` → "Debug: Start Debugging"
@@ -151,9 +152,11 @@ The project includes pre-configured launch settings in `.vscode/launch.json`:
 
 #### Debugging Tips
 
-1. **Extension Host Logs**: Check the Output panel → "Log (Extension Host)"
-2. **Developer Tools**: Use `Help → Toggle Developer Tools` in the Extension Development Host
-3. **Reload Extension**: `Ctrl+R` in the Extension Development Host to reload after changes
+1. **If F5 fails**: Make sure you have `src/extension.ts` open and run `npm run compile` first
+2. **Extension Host Logs**: Check the Output panel → "Log (Extension Host)"
+3. **Developer Tools**: Use `Help → Toggle Developer Tools` in the Extension Development Host
+4. **Reload Extension**: `Ctrl+R` in the Extension Development Host to reload after changes
+5. **TypeScript Errors**: Run `npm run compile` to check for compilation issues
 
 ### Building from Source
 
