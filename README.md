@@ -119,3 +119,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 Made with ❤️ by the [Codegen](https://codegen.com) team
+
+## Quick Start
+
+1. Install the extension from the VSCode Marketplace
+2. Run `Codegen: Login` from the Command Palette
+3. Start creating agents from the sidebar!
