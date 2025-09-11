@@ -78,27 +78,91 @@ You can customize the extension behavior in VSCode settings:
 
 ## Development
 
+### Local Development Setup
+
+Most people will use this extension in development mode. Here's how to set it up:
+
+#### Prerequisites
+- [Node.js](https://nodejs.org/) (v16 or higher)
+- [VSCode](https://code.visualstudio.com/)
+- A [Codegen](https://codegen.com) account
+
+#### Setup Steps
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/codegen-sh/codegen-ide.git
+   cd codegen-ide
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Open in VSCode**
+   ```bash
+   code .
+   ```
+
+4. **Launch Extension Development Host**
+   - Press `F5` or go to Run → Start Debugging
+   - This opens a new VSCode window with the extension loaded
+   - You can also use `Ctrl+Shift+P` → "Debug: Start Debugging"
+
+5. **Test the extension**
+   - In the new VSCode window, open the Command Palette (`Ctrl+Shift+P`)
+   - Run `Codegen: Login` to authenticate
+   - The Codegen sidebar should appear in the Activity Bar
+
+#### Development Workflow
+
+- **Hot Reload**: The extension automatically reloads when you make changes
+- **Debugging**: Set breakpoints in your TypeScript code and they'll work in the Extension Development Host
+- **Console Logs**: Check the Debug Console in the main VSCode window for extension logs
+- **Restart Extension**: Use `Ctrl+Shift+P` → "Developer: Reload Window" in the Extension Development Host
+
+#### Available Scripts
+
+```bash
+# Compile TypeScript (one-time)
+npm run compile
+
+# Watch mode (auto-compile on changes)
+npm run watch
+
+# Run tests
+npm test
+
+# Lint code
+npm run lint
+
+# Package extension for distribution
+npm run package
+```
+
+#### VSCode Launch Configurations
+
+The project includes pre-configured launch settings in `.vscode/launch.json`:
+
+- **Run Extension**: Launches the extension in a new VSCode window
+- **Extension Tests**: Runs the test suite
+- **Attach to Extension Host**: For debugging running extensions
+
+#### Debugging Tips
+
+1. **Extension Host Logs**: Check the Output panel → "Log (Extension Host)"
+2. **Developer Tools**: Use `Help → Toggle Developer Tools` in the Extension Development Host
+3. **Reload Extension**: `Ctrl+R` in the Extension Development Host to reload after changes
+
 ### Building from Source
 
 ```bash
-# Clone the repository
-git clone https://github.com/codegen-sh/codegen-ide.git
-cd codegen-ide
-
-# Install dependencies
+# Full build process
 npm install
-
-# Compile TypeScript
 npm run compile
-
-# Run in development mode
-npm run watch
-```
-
-### Testing
-
-```bash
 npm test
+npm run package
 ```
 
 ## Contributing

@@ -129,6 +129,11 @@
           "type": "number",
           "default": 30,
           "description": "Auto-refresh interval in seconds"
+        },
+        "codegen.webUrl": {
+          "type": "string",
+          "default": "https://codegen.com",
+          "description": "Codegen web URL for browser authentication"
         }
       }
     }
