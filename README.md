@@ -4,9 +4,15 @@ A VSCode extension for [Codegen](https://codegen.com) that allows you to create 
 
 ## Features
 
+🏠 **Home Screen**
+- Prominent purple "New Agent" button for easy access
+- Intuitive interface similar to the Codegen CLI
+- Built-in prompt input with helpful examples
+- Keyboard shortcuts (Ctrl/Cmd + Enter to create)
+
 🤖 **Agent Management**
 - View your recent agent runs in a dedicated sidebar
-- Create new agents with custom prompts
+- Create new background agents with custom prompts
 - Monitor agent status with real-time updates
 - Open agent runs in your browser
 
@@ -36,8 +42,16 @@ A VSCode extension for [Codegen](https://codegen.com) that allows you to create 
 
 ### Creating Agents
 
-1. Click the "+" button in the Codegen sidebar
-2. Enter your agent prompt (e.g., "Fix the bug in the login component")
+**Method 1: Home Screen (Recommended)**
+1. Open the Codegen sidebar and go to the "Home" view
+2. Click the purple "New Agent" button
+3. Enter your agent prompt in the text area (e.g., "Fix the bug in the login component")
+4. Press the "New Agent" button or use Ctrl/Cmd + Enter
+5. The agent will be created and you can monitor its progress
+
+**Method 2: Command Palette**
+1. Use `Codegen: Create New Agent` command
+2. Enter your agent prompt in the input box
 3. The agent will be created and you can monitor its progress
 
 ### Viewing Agent Runs

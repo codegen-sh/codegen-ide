@@ -75,21 +75,22 @@
     "views": {
       "codegen": [
         {
+          "id": "codegenHome",
+          "name": "Home",
+          "type": "webview"
+        },
+        {
           "id": "codegenAgentRuns",
           "name": "Recent Agent Runs",
           "when": "codegen.authenticated"
-        },
-        {
-          "id": "codegenWelcome",
-          "name": "Welcome",
-          "when": "!codegen.authenticated"
         }
       ]
     },
     "viewsWelcome": [
       {
-        "view": "codegenWelcome",
-        "contents": "Welcome to Codegen! 🤖\n\nTo get started, you need to authenticate with your Codegen account.\n\n[Login to Codegen](command:codegen.login)\n\nOnce logged in, you'll be able to:\n• View your recent agent runs\n• Create new agents\n• Manage your code automation\n\nVisit [codegen.com](https://codegen.com) to learn more."
+        "view": "codegenAgentRuns",
+        "contents": "Your recent agent runs will appear here once you create them using the Home view above.",
+        "when": "codegen.authenticated"
       }
     ],
     "menus": {
