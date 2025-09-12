@@ -46,6 +46,8 @@ export class ApiClient {
             if (token) {
                 config.headers.Authorization = `Bearer ${token}`;
             }
+            // Add client identifier similar to CLI
+            config.headers['x-codegen-client'] = 'codegen__ide_extension';
             return config;
         });
 

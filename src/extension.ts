@@ -1,5 +1,6 @@
 import * as vscode from 'vscode';
 import { AgentRunsProvider } from './providers/AgentRunsProvider';
+import { HomeViewProvider } from './providers/HomeViewProvider';
 import { AuthManager } from './auth/AuthManager';
 import { ApiClient } from './api/ApiClient';
 
@@ -12,14 +13,20 @@ export function activate(context: vscode.ExtensionContext) {
     // Initialize API client
     const apiClient = new ApiClient(authManager);
     
-    // Initialize agent runs provider
+    // Initialize providers
     const agentRunsProvider = new AgentRunsProvider(apiClient, authManager);
+    const homeViewProvider = new HomeViewProvider(context.extensionUri, apiClient, authManager);
     
     // Register tree data provider
     vscode.window.createTreeView('codegenAgentRuns', {
         treeDataProvider: agentRunsProvider,
         showCollapseAll: true
     });
+
+    // Register webview provider
+    context.subscriptions.push(
+        vscode.window.registerWebviewViewProvider('codegenHome', homeViewProvider)
+    );
 
     // Set authentication context
     vscode.commands.executeCommand('setContext', 'codegen.authenticated', authManager.isAuthenticated());
@@ -30,12 +37,14 @@ export function activate(context: vscode.ExtensionContext) {
             await authManager.login();
             vscode.commands.executeCommand('setContext', 'codegen.authenticated', authManager.isAuthenticated());
             agentRunsProvider.refresh();
+            homeViewProvider.refresh();
         }),
 
         vscode.commands.registerCommand('codegen.logout', async () => {
             await authManager.logout();
             vscode.commands.executeCommand('setContext', 'codegen.authenticated', authManager.isAuthenticated());
             agentRunsProvider.refresh();
+            homeViewProvider.refresh();
         }),
 
         vscode.commands.registerCommand('codegen.showAgentRuns', () => {
@@ -72,6 +81,7 @@ export function activate(context: vscode.ExtensionContext) {
                         }
                     });
                     agentRunsProvider.refresh();
+                    homeViewProvider.refresh();
                 } catch (error) {
                     vscode.window.showErrorMessage(`Failed to create agent: ${error}`);
                 }
