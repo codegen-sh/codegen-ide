@@ -1,3 +1,4 @@
+// Codegen IDE
 import * as vscode from 'vscode';
 import { AgentRunsProvider } from './providers/AgentRunsProvider';
 import { AuthManager } from './auth/AuthManager';

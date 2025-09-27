@@ -115,15 +115,10 @@ process_file_write() {
         create_trace_entry "Write" "$tool_input"
     fi
 
-    # For file writes, attribute all lines in the file (since it's newly created/modified)
+    # For file writes, only attribute the new content, not the entire file
     if [ "$ENABLE_ATTRIBUTION" = "true" ] && [ -f "$file_path" ] && [ -n "$content" ]; then
-        total_lines=$(wc -l < "$file_path")
-        if [ "$total_lines" -gt 0 ]; then
-            log "info" "Attributing all $total_lines lines in new file $file_path"
-            for ((line=1; line<=total_lines; line++)); do
-                "$GIT_AGENTIC_CMD" attr "$file_path" "$line" ai --agent="$CLAUDE_AGENT_ID" 2>/dev/null || true
-            done
-        fi
+        # Only attribute lines that actually contain the new content
+        find_new_content_lines "$file_path" "$content"
     fi
 }
 
@@ -211,18 +206,8 @@ find_new_content_lines() {
             fi
         done
     else
-        # Fallback: attribute last few lines if content matching fails
-        total_lines=$(wc -l < "$file_path")
-        if [ "$total_lines" -gt 0 ]; then
-            lines_to_attribute=3  # Attribute last 3 lines as fallback
-            start_line=$((total_lines - lines_to_attribute + 1))
-            [ "$start_line" -lt 1 ] && start_line=1
-
-            log "debug" "Fallback: Attributing lines $start_line-$total_lines"
-            for ((line=start_line; line<=total_lines; line++)); do
-                "$GIT_AGENTIC_CMD" attr "$file_path" "$line" ai --agent="$CLAUDE_AGENT_ID" 2>/dev/null || true
-            done
-        fi
+        # If content matching fails, don't attribute anything - be conservative
+        log "debug" "Content matching failed for $file_path, not attributing any lines"
     fi
 }
 
