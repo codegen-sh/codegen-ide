@@ -1,0 +1,8 @@
+{
+  "claude": {
+    "name": "Claude",
+    "model": "Claude-3.5-Sonnet",
+    "website": "https://claude.ai",
+    "description": "Anthropic's AI assistant with strong reasoning capabilities"
+  }
+}

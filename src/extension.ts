@@ -3,6 +3,7 @@ import { AgentRunsProvider } from './providers/AgentRunsProvider';
 import { AuthManager } from './auth/AuthManager';
 import { ApiClient } from './api/ApiClient';
 
+// Main activation function for the VS Code extension
 export function activate(context: vscode.ExtensionContext) {
     console.log('Codegen IDE extension is now active!');
 

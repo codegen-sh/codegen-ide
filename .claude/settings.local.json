@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|MultiEdit|Write|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/jonhack/CS/CODEGEN/codegen-ide/.claude/hooks/claude_agentic_hook.sh"
+          }
+        ]
+      }
+    ]
+  }
+}

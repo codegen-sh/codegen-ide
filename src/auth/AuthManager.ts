@@ -1,5 +1,6 @@
 import * as vscode from "vscode";
 
+// Handles authentication and token management for the Codegen API
 export class AuthManager {
   private static readonly TOKEN_KEY = "codegen.token";
   private static readonly ORG_ID_KEY = "codegen.orgId";

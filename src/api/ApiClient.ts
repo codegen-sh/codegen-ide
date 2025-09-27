@@ -25,9 +25,10 @@ export interface CreateAgentRunRequest {
     repo_id?: number;
 }
 
+// Client for communicating with the Codegen API
 export class ApiClient {
     private client: AxiosInstance;
-    
+
     constructor(private authManager: AuthManager) {
         const config = vscode.workspace.getConfiguration('codegen');
         const apiEndpoint = config.get('apiEndpoint', 'https://api.codegen.com');
