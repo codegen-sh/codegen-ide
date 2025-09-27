@@ -3,7 +3,7 @@
   "displayName": "Codegen IDE",
   "description": "VSCode Extension for Codegen - Create and manage async code agents",
   "version": "0.1.0",
-  "publisher": "codegen-sh",
+  "publisher": "codegen",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -156,5 +156,9 @@
   },
   "dependencies": {
     "axios": "^1.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codegen-sh/codegen-ide.git"
   }
 }
