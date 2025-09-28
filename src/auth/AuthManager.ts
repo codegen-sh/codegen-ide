@@ -121,7 +121,7 @@ export class AuthManager {
     await this.context.secrets.delete(AuthManager.TOKEN_KEY);
     await this.context.globalState.update(AuthManager.ORG_ID_KEY, undefined);
     vscode.window.showInformationMessage(
-      "Successfully logged out from Codegen"
+      "Successfully logged out from Codegen! 👋"
     );
   }
 

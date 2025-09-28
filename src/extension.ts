@@ -6,7 +6,7 @@ import { ApiClient } from './api/ApiClient';
 
 // Main activation function for the VS Code extension
 export function activate(context: vscode.ExtensionContext) {
-    console.log('Codegen IDE extension is now active!');
+    console.log('Codegen IDE extension is now active! 🚀');
 
     // Initialize auth manager
     const authManager = new AuthManager(context);

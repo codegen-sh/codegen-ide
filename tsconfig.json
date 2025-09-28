@@ -8,6 +8,7 @@
       "DOM"
     ],
     "sourceMap": true,
+    "declaration": false,
     "rootDir": "src",
     "strict": true
   },

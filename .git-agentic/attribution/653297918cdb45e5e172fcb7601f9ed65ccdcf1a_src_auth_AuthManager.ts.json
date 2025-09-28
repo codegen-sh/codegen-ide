@@ -1,0 +1,1148 @@
+{
+  "commit": "653297918cdb45e5e172fcb7601f9ed65ccdcf1a",
+  "file": "/Users/jonhack/CS/CODEGEN/codegen-ide/src/auth/AuthManager.ts",
+  "timestamp": "2025-09-28T11:02:34.782252",
+  "lines": {
+    "1": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:23.741240"
+    },
+    "2": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:23.839904"
+    },
+    "3": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:23.911672"
+    },
+    "4": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:23.980659"
+    },
+    "5": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:24.049059"
+    },
+    "6": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:24.115217"
+    },
+    "7": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:24.182368"
+    },
+    "8": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:24.247170"
+    },
+    "9": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:24.313374"
+    },
+    "10": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:24.379876"
+    },
+    "11": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:24.445895"
+    },
+    "12": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:24.515054"
+    },
+    "13": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:24.576220"
+    },
+    "14": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:24.643792"
+    },
+    "15": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:24.712951"
+    },
+    "16": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:24.780844"
+    },
+    "17": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:24.849994"
+    },
+    "18": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:24.920499"
+    },
+    "19": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:24.988983"
+    },
+    "20": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:25.059562"
+    },
+    "21": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:25.129812"
+    },
+    "22": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:25.199656"
+    },
+    "23": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:25.270340"
+    },
+    "24": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:25.339408"
+    },
+    "25": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:25.407280"
+    },
+    "26": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:25.475330"
+    },
+    "27": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:25.543599"
+    },
+    "28": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:25.611027"
+    },
+    "29": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:25.679577"
+    },
+    "30": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:25.749186"
+    },
+    "31": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:25.818423"
+    },
+    "32": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:25.886047"
+    },
+    "33": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:25.952119"
+    },
+    "34": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:26.018522"
+    },
+    "35": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:26.082979"
+    },
+    "36": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:26.151245"
+    },
+    "37": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:26.220110"
+    },
+    "38": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:26.288244"
+    },
+    "39": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:26.357989"
+    },
+    "40": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:26.422602"
+    },
+    "41": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:26.487014"
+    },
+    "42": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:26.551041"
+    },
+    "43": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:26.616377"
+    },
+    "44": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:26.679843"
+    },
+    "45": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:26.746963"
+    },
+    "46": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:26.816180"
+    },
+    "47": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:26.886045"
+    },
+    "48": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:26.956468"
+    },
+    "49": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:27.028639"
+    },
+    "50": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:27.097889"
+    },
+    "51": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:27.166007"
+    },
+    "52": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:27.235103"
+    },
+    "53": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:27.304261"
+    },
+    "54": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:27.373020"
+    },
+    "55": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:27.439732"
+    },
+    "56": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:27.508741"
+    },
+    "57": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:27.578429"
+    },
+    "58": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:27.649719"
+    },
+    "59": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:27.719770"
+    },
+    "60": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:27.788417"
+    },
+    "61": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:27.856067"
+    },
+    "62": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:27.926008"
+    },
+    "63": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:27.993784"
+    },
+    "64": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:28.065166"
+    },
+    "65": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:28.134490"
+    },
+    "66": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:28.203598"
+    },
+    "67": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:28.273461"
+    },
+    "68": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:28.342291"
+    },
+    "69": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:28.410733"
+    },
+    "70": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:28.480851"
+    },
+    "71": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:28.548969"
+    },
+    "72": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:28.614612"
+    },
+    "73": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:28.681110"
+    },
+    "74": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:28.748602"
+    },
+    "75": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:28.817080"
+    },
+    "76": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:28.886601"
+    },
+    "77": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:28.953311"
+    },
+    "78": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:29.019130"
+    },
+    "79": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:29.087532"
+    },
+    "80": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:29.151341"
+    },
+    "81": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:29.216781"
+    },
+    "82": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:29.283707"
+    },
+    "83": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:29.352950"
+    },
+    "84": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:29.420253"
+    },
+    "85": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:29.488469"
+    },
+    "86": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:29.555750"
+    },
+    "87": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:29.618372"
+    },
+    "88": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:29.681980"
+    },
+    "89": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:29.751386"
+    },
+    "90": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:29.820739"
+    },
+    "91": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:29.889435"
+    },
+    "92": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:29.960149"
+    },
+    "93": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:30.028837"
+    },
+    "94": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:30.098599"
+    },
+    "95": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:30.167622"
+    },
+    "96": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:30.235984"
+    },
+    "97": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:30.299822"
+    },
+    "98": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:30.366121"
+    },
+    "99": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:30.431169"
+    },
+    "100": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:30.497604"
+    },
+    "101": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:30.565606"
+    },
+    "102": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:30.631871"
+    },
+    "103": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:30.699191"
+    },
+    "104": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:30.766222"
+    },
+    "105": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:30.833321"
+    },
+    "106": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:30.902422"
+    },
+    "107": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:30.970711"
+    },
+    "108": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:31.037941"
+    },
+    "109": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:31.106985"
+    },
+    "110": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:31.174891"
+    },
+    "111": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:31.240843"
+    },
+    "112": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:31.308626"
+    },
+    "113": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:31.374349"
+    },
+    "114": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:31.444697"
+    },
+    "115": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:31.511549"
+    },
+    "116": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:31.575444"
+    },
+    "117": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:31.638627"
+    },
+    "118": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:31.702666"
+    },
+    "119": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:31.766659"
+    },
+    "120": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:31.834696"
+    },
+    "121": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:31.901988"
+    },
+    "122": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:31.969826"
+    },
+    "123": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:32.037746"
+    },
+    "124": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:32.108009"
+    },
+    "125": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:32.177207"
+    },
+    "126": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:32.241071"
+    },
+    "127": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:32.305962"
+    },
+    "128": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:32.373065"
+    },
+    "129": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:32.440958"
+    },
+    "130": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:32.508035"
+    },
+    "131": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:32.575086"
+    },
+    "132": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:32.645382"
+    },
+    "133": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:32.715293"
+    },
+    "134": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:32.787592"
+    },
+    "135": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:32.860698"
+    },
+    "136": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:32.932348"
+    },
+    "137": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:33.006335"
+    },
+    "138": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:33.074983"
+    },
+    "139": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:33.142626"
+    },
+    "140": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:33.210975"
+    },
+    "141": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:33.278181"
+    },
+    "142": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:33.346845"
+    },
+    "143": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:33.415214"
+    },
+    "144": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:33.483000"
+    },
+    "145": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:33.551706"
+    },
+    "146": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:33.617311"
+    },
+    "147": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:33.682065"
+    },
+    "148": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:33.744975"
+    },
+    "149": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:33.812784"
+    },
+    "150": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:33.878826"
+    },
+    "151": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:33.951893"
+    },
+    "152": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:34.022365"
+    },
+    "153": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:34.091458"
+    },
+    "154": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:34.162049"
+    },
+    "155": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:34.230326"
+    },
+    "156": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:34.299833"
+    },
+    "157": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:34.369366"
+    },
+    "158": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:34.439905"
+    },
+    "159": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:34.509841"
+    },
+    "160": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:34.579030"
+    },
+    "161": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:34.647609"
+    },
+    "162": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:34.715937"
+    },
+    "163": {
+      "type": "ai",
+      "agent_id": "claude",
+      "agent_name": "Claude",
+      "model": "Claude-3.5-Sonnet",
+      "timestamp": "2025-09-28T11:02:34.782231"
+    }
+  }
+}
